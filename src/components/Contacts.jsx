@@ -1,9 +1,11 @@
 import React from "react";
 
-class Contacts extends React.Component {
-	render() {
-		return (<div />);
-	}
+import Contact from "./Contact";
+
+function Contacts(props) {
+  const { contactsList, nameContac, filter } = props;
+
+  return <div></div>;
 }
 
 export default Contacts;
