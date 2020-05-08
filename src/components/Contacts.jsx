@@ -1,6 +1,12 @@
 import React from "react";
+import Contact from "./Contact";
 
 function Contacts(props) {
+  const { contacts } = props;
+  const { filterText } = props;
+  const { filterName } = props;
+
+  console.log(filterName);
   return (
     <div className="container">
       <section className="contacts">
@@ -13,9 +19,16 @@ function Contacts(props) {
           <span className="contact__data">Empresa</span>
           <span className="contact__data">Departamento</span>
         </article>
+
+        {contacts.map((item) => {
+          return <Contact contact={item} />;
+        })}
       </section>
     </div>
   );
 }
 
 export default Contacts;
+// {contacts.map((item) => {
+//   return <Contact contact={item} />;
+// })}

@@ -2,18 +2,22 @@ import React from "react";
 
 function Contact(props) {
   const { contact } = props;
+  const [year, month, day] = contact.admissionDate.split("-");
+
   return (
-    <li className="card-contact">
-      <div className="avatar-contact">
+    <article className="contact">
+      <div className="contact__avatar">
         <img src={contact.avatar} alt="Contact Avatar" />
       </div>
-      <span className="data-contact">{contact.name}</span>
-      <span className="data-contact">{contact.phone}</span>
-      <span className="data-contact">{contact.country}</span>
-      <span className="data-contact">{contact.admissionDate}</span>
-      <span className="data-contact">{contact.company}</span>
-      <span className="data-contact">{contact.department}</span>
-    </li>
+      <span className="contact__data">{contact.name}</span>
+      <span className="contact__data">{contact.phone}</span>
+      <span className="contact__data">{contact.country}</span>
+      <span className="contact__data">
+        {day.split("T")[0] + "/" + month + "/" + year}
+      </span>
+      <span className="contact__data">{contact.company}</span>
+      <span className="contact__data">{contact.department}</span>
+    </article>
   );
 }
 
