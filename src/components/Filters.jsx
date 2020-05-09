@@ -1,8 +1,9 @@
 import React from "react";
 
 function Filters(props) {
-  const { filterText, setfilterText } = props;
+  const { filterText, setFilterText } = props;
   const { orderContacts } = props;
+
   return (
     <div className="container">
       <section className="filters">
@@ -12,7 +13,7 @@ function Filters(props) {
             className="filters__search__input"
             placeholder="Pesquisar"
             value={filterText}
-            onChange={(e) => setfilterText(e.target.value)}
+            onChange={(e) => setFilterText(e.target.value)}
           />
 
           <button className="filters__search__icon" onClick={() => {}}>

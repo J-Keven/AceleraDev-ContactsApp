@@ -7,13 +7,13 @@ import Filtres from "./components/Filters";
 
 function App() {
   const [contactsAll, setContactsAll] = useState([]);
-  const [contacts, setContacts] = useState([]); // selecionado
-  const [filterText, setfilterText] = useState(""); // filter search
-  const [filterName, setFilterName] = useState("nome");
+  const [contacts, setContacts] = useState([]);
+  const [filterText, setFilterText] = useState(""); // Search
+  const [filterName, setFilterName] = useState("name"); // selected filter
 
   function handlefilters(filterName) {
-    const test = [...contactsAll];
-    test.sort((a, b) => {
+    const sorterdContactsList = [...contactsAll];
+    sorterdContactsList.sort((a, b) => {
       if (a[filterName] > b[filterName]) {
         return 1;
       } else if (b[filterName] > a[filterName]) {
@@ -21,10 +21,11 @@ function App() {
       }
       return 0;
     });
+
     setFilterName(filterName);
-    setContacts([...test]);
+    setContacts([...sorterdContactsList]);
   }
-  console.log(filterText);
+
   useEffect(() => {
     async function handleRequestApi() {
       const url = "https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts";
@@ -33,6 +34,7 @@ function App() {
       setContactsAll(data);
       setContacts(data);
     }
+
     handleRequestApi();
   }, []);
 
@@ -41,7 +43,7 @@ function App() {
       <Topbar />
       <Filtres
         filterText={filterText}
-        setfilterText={setfilterText}
+        setFilterText={setFilterText}
         orderContacts={handlefilters}
       />
       <Contacts

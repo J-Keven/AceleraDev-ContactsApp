@@ -6,7 +6,16 @@ function Contacts(props) {
   const { filterText } = props;
   const { filterName } = props;
 
-  console.log(filterName);
+  function handleSubString(string = "", SubString = "") {
+    if (filterName === "admissionDate") {
+      const [year, month, day] = string.split("-");
+      const date = day.split("T")[0] + "/" + month + "/" + year;
+      return date.substr(0, SubString.length) === SubString;
+    }
+
+    return string.substr(0, SubString.length) === SubString;
+  }
+
   return (
     <div className="container">
       <section className="contacts">
@@ -20,15 +29,14 @@ function Contacts(props) {
           <span className="contact__data">Departamento</span>
         </article>
 
-        {contacts.map((item) => {
-          return <Contact contact={item} />;
-        })}
+        {contacts
+          .filter((item) => handleSubString(item[filterName], filterText))
+          .map((item) => (
+            <Contact data={item} />
+          ))}
       </section>
     </div>
   );
 }
 
 export default Contacts;
-// {contacts.map((item) => {
-//   return <Contact contact={item} />;
-// })}
