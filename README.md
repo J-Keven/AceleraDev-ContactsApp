@@ -77,7 +77,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
 * Navegue até a pasta `AceleraDev-ContactsApp`:
 
-      		$ cd AceleraDev-ContactsApp/
+      $ cd AceleraDev-ContactsApp/
 
 * Execute o comando para instalar as depedências:
 
@@ -89,7 +89,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
 * Para inicializar a plicação execulte:
 
-      		& npm run start
+      & npm run start
 
 ## :memo: Licença
 
