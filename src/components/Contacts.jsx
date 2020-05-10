@@ -32,7 +32,7 @@ function Contacts(props) {
         {contacts
           .filter((item) => handleSubString(item[filterName], filterText))
           .map((item) => (
-            <Contact data={item} />
+            <Contact data={item} key={item.id} />
           ))}
       </section>
     </div>
