@@ -1,11 +1,7 @@
 import React from "react";
 import Contact from "./Contact";
 
-function Contacts(props) {
-  const { contacts } = props;
-  const { filterText } = props;
-  const { filterName } = props;
-
+function Contacts({ contacts = [], filterText = "", filterName = "" }) {
   function handleSubString(string = "", SubString = "") {
     if (filterName === "admissionDate") {
       const [year, month, day] = string.split("-");
@@ -20,8 +16,8 @@ function Contacts(props) {
   }
 
   return (
-    <div className="container">
-      <section className="contacts" data-testid="contact">
+    <div className="container" data-testid="contacts">
+      <section className="contacts">
         <article className="contact">
           <span className="contact__avatar" />
           <span className="contact__data">Nome</span>

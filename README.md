@@ -31,10 +31,19 @@ O desafio é desenvolver um _SPA (Single Page Application)_ de uma lista de cont
 
 GET: _https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts_
 
-#### Requisitos - Parte 1:
+#### Requisitos
 
 - Modularize os componentes na pasta components.
 - Atualize os arquivos de componentes carregando corretamente seus estilos e suas marcações JSX.
+- Crie os _estados_ do SPA.
+- Consuma a _API de contatos_ no _ciclo de vida correto_ do componente.
+- Implemente a **busca** para filtrar os contatos em tempo real.
+- Implemente os filtros de ordenação por _Nome_, _País_, _Empresa_, _Departamento_ e _Data de Admissão_.
+
+### Dicas:
+
+- Tudo pode ser resolvido em um único componente.
+- O _estado_ será mais complexo, ou seja, será um objeto com múltiplas _propriedades_.
 
 #### Iniciar o projeto:
 
