@@ -40,17 +40,19 @@ function App() {
 
   return (
     <React.Fragment>
-      <Topbar />
-      <Filtres
-        filterText={filterText}
-        setFilterText={setFilterText}
-        orderContacts={handlefilters}
-      />
-      <Contacts
-        contacts={contacts}
-        filterText={filterText}
-        filterName={filterName}
-      />
+      <div className="app" data-testid="app">
+        <Topbar />
+        <Filtres
+          filterText={filterText}
+          setFilterText={setFilterText}
+          orderContacts={handlefilters}
+        />
+        <Contacts
+          contacts={contacts}
+          filterText={filterText}
+          filterName={filterName}
+        />
+      </div>
     </React.Fragment>
   );
 }

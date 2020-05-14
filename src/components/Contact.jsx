@@ -9,14 +9,24 @@ function Contact(props) {
       <div className="contact__avatar">
         <img src={data.avatar} alt="Contact Avatar" />
       </div>
-      <span className="contact__data">{data.name}</span>
-      <span className="contact__data">{data.phone}</span>
-      <span className="contact__data">{data.country}</span>
-      <span className="contact__data">
+      <span className="contact__data" data-testid="contact-name">
+        {data.name}
+      </span>
+      <span className="contact__data" data-testid="contact-phone">
+        {data.phone}
+      </span>
+      <span className="contact__data" data-testid="contact-country">
+        {data.country}
+      </span>
+      <span className="contact__data" data-testid="contact-date">
         {day.split("T")[0] + "/" + month + "/" + year}
       </span>
-      <span className="contact__data">{data.company}</span>
-      <span className="contact__data">{data.department}</span>
+      <span className="contact__data" data-testid="contact-company">
+        {data.company}
+      </span>
+      <span className="contact__data" data-testid="contact-department">
+        {data.department}
+      </span>
     </article>
   );
 }

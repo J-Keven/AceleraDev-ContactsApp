@@ -5,7 +5,7 @@ function Filters(props) {
   const { orderContacts } = props;
 
   return (
-    <div className="container">
+    <div className="container" data-testid="filters">
       <section className="filters">
         <div className="filters__search">
           <input

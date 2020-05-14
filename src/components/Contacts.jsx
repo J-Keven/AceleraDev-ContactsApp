@@ -13,12 +13,15 @@ function Contacts(props) {
       return date.substr(0, SubString.length) === SubString;
     }
 
-    return string.substr(0, SubString.length) === SubString;
+    return (
+      string.substr(0, SubString.length).toLowerCase() ===
+      SubString.toLowerCase()
+    );
   }
 
   return (
     <div className="container">
-      <section className="contacts">
+      <section className="contacts" data-testid="contact">
         <article className="contact">
           <span className="contact__avatar" />
           <span className="contact__data">Nome</span>
