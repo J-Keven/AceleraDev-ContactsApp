@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./App.scss";
 import Contacts from "./components/Contacts";
 import Topbar from "./components/Topbar";
-import Filtres from "./components/Filters";
+import Filters from "./components/Filters";
 
 function App() {
   const [contactsAll, setContactsAll] = useState([]);
@@ -42,7 +42,7 @@ function App() {
     <React.Fragment>
       <div className="app" data-testid="app">
         <Topbar />
-        <Filtres
+        <Filters
           filterText={filterText}
           setFilterText={setFilterText}
           orderContacts={handlefilters}
