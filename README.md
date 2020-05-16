@@ -68,7 +68,8 @@ Neste desafio você vai praticar os seus conhecimentos em:
 
 ### Screenshot de Referência
 
-![](https://codenation-challenges.s3-us-west-1.amazonaws.com/react-14/screenshot.png)
+<img src="https://codenation-challenges.s3-us-west-1.amazonaws.com/react-14/screenshot.png" height='300' width='200'/>
+
 
 ## 🤔 Como contribuir
 
